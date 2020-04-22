@@ -1,0 +1,2055 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0"> 
+<title>导航</title>
+
+<style type="text/css">
+<!--
+.style13 {font-size: 18px}
+.style16 {font-weight: bold}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+body {
+	background-image: url(https://www.cnblogs.com/Skins/coffee/images/bg_body.gif);
+}
+-->
+</style>
+</head>
+<body class="mapspage">
+
+<div align="center"><img src="https://www.cnblogs.com/Skins/coffee/images/bg_title.gif" width="107" height="42" />
+  <img src="https://www.cnblogs.com/Skins/coffee/images/header.gif" width="290" height="144" />
+  <script src="js/jquery.min.js"></script>
+     <script src="js/jquery.validate.js"></script>
+           <script type="text/javascript">
+             $(function () {
+                 $("#contact").validate({
+                     rules: {
+                         q: "isIdCard"
+                     }
+                 });
+             });
+             // 身份证号验证 
+             function isIdCard(cardid) {
+                 //身份证正则表达式(18位) 
+                 var isIdCard2 = /^[1-9]\d{5}(19\d{2}|[2-9]\d{3})((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])(\d{4}|\d{3}X)$/i;
+                 var stard = "10X98765432"; //最后一位身份证的号码
+                 var first = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]; //1-17系数
+                 var sum = 0;
+                 if (!isIdCard2.test(cardid)) {
+                     return false;
+                 }
+                 var year = cardid.substr(6, 4);
+                 var month = cardid.substr(10, 2);
+                 var day = cardid.substr(12, 2);
+                 var birthday = cardid.substr(6, 8);
+                 if (birthday != dateToString(new Date(year+'/'+month+'/'+day))) {//校验日期是否合法
+                     return false;
+                 }
+                 for (var i = 0; i < cardid.length - 1; i++) {
+                     sum += cardid[i] * first[i];
+                 }
+                 var result = sum % 11;
+                 var last = stard[result]; //计算出来的最后一位身份证号码
+                 if (cardid[cardid.length - 1].toUpperCase() == last) {
+                     return true;
+                 } else {
+                     return false;
+                 }
+             }
+             // jquery validate身份证号验证
+             jQuery.validator.addMethod("isIdCard",
+             function (value, element) {
+                 return this.optional(element) || (isIdCard(value));
+             },
+             "请确认身份证号是否正确!");
+           </script>
+  <div class="container">
+  </p>
+</div>
+<tr><td height="74">&nbsp;</td>
+  <td height="74" colspan="4"><form action="http://www.baidu.com/baidu" target="_blank">
+    <div align="center">
+      <p><span lang="EN-US" style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;"><span class="style16"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a
+  href="http://ybzy.ys168.com">ybzy</a></span></span></span></span></span></span></span></span>&nbsp; <a
+  href="http://www.hao123.com/hardware"></a></span></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a
+  href="https://pan.baidu.com">百度盘</a></span></span></span></span></span></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US">&nbsp; <a
+  href="http://www.hao123.com/hardware"></a></span></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a
+  href="http://note.baidu.com">百度云</a></span></span></span></span></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US">&nbsp; <span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a href="https://www.yinxiang.com">印象</a></span></span></span></span></span></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US">&nbsp; <span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a href="http://www.qiannao.com">千脑</a></span></span></span></span></span></span></span></span><br />
+          <br />
+        </span></span><span lang="EN-US" style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;"><span class="style16">
+            <input name="word" class="style13" size="20">
+            <span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"></span></span></span></span></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span class="style16">
+            <input name="submit" type="submit" class="style13" value="百度" />
+        </span></span></p>
+      <span lang="EN-US" style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;"><o:p></o:p></span><span lang="EN-US" style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a href="http://www.google.com/">Google</a></span></span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;<span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a href="https://translate.google.cn/">Go翻译</a><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;</span></span><a href="https://cn.bing.com/?ensearch=1&FORM=BEHPTB">Bing</a></span></span></span></span>
+      <p><span lang="EN-US" style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;"> <a
+  href="http://www.hao123.com/">hao123</a> <span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US">&nbsp;</span><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><span style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;" lang="EN-US" xml:lang="EN-US"><a
+  href="https://www.taobao.com">淘宝</a></span></span></span>&nbsp; <a
+  href="http://www.hao123.com/hardware">数码</a></span></span></span></p>
+      <table width="363" height="861" border="0" align="center">
+        <tr valign="top">
+          <td width="33">&nbsp;</td>
+          <td width="108" height="857"><div class="rest-site-row">
+              <div class="rest-site-title style15 style16 style17">
+                <div align="left">综合</div>
+              </div>
+              <div align="left">
+                  <dl>
+                    <dt><a href="http://www.mtime.com" class="rest-site-link" target="_blank">时光网</a></dt>
+                  </dl>
+                </div>
+                <p align="left"><a href="http://tv.cntv.cn/live/cctv1" class="rest-site-link" target="_blank">央视直播</a></p>
+              <p align="left"><a href="http://video.msj1.com" class="rest-site-link" target="_blank">美剧在线</a></p>
+              <p align="left"><a href="http://moviesoon.com/trailers.html" class="rest-site-link" target="_blank">预告片</a></p>
+              <p align="left"><a href="https://www.yinfans.me" class="rest-site-link" target="_blank">音范丝电影</a></p>
+              <p align="left"><a href="https://www.btdx8.com" class="rest-site-link" target="_blank">比特大雄</a></p>
+              <p align="left"><a href="https://www.ithome.com/" class="rest-site-link" target="_blank">IT之家</a></p>
+              <p align="left"><a href="http://www.zol.com.cn/" class="rest-site-link" target="_blank">中关村在线</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.pconline.com.cn/" class="rest-site-link" target="_blank">太平洋电脑</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.it168.com/" class="rest-site-link" target="_blank">IT168</a></p>
+              <p align="left"><a href="http://www.mydrivers.com/" class="rest-site-link" target="_blank">快科技</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.pchome.net/" class="rest-site-link" target="_blank">电脑之家</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://digi.sina.com.cn/" class="rest-site-link" target="_blank">新浪数码</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://digi.tech.qq.com/" class="rest-site-link" target="_blank">腾讯数码</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://tech.ifeng.com/product/" class="rest-site-link" target="_blank">凤凰数码</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.yesky.com/" class="rest-site-link" target="_blank">天极网</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.enet.com.cn/" class="rest-site-link" target="_blank">硅谷动力</a></p>
+              <p align="left"><a href="https://mp.weixin.qq.com/cgi-bin/loginpage?t=wxm2-login&lang=zh_CN" class="rest-site-link" target="_blank">1908924817</a></p>
+              <p align="left"><a href="http://xncxgafj.qhxywl.com/xncxgafj_houtai/login.php?gotopage=%2Fxncxgafj_houtai%2Findex.php" class="rest-site-link" target="_blank">旭云</a> <a href="http://hz.wechat.xnqys.cn/admin" class="rest-site-link" target="_blank">清一色</a></p>
+              <p align="left"><a href="https://wgxt.tchsoft.com:50019/gagrid/login.jsp" class="rest-site-link" target="_blank">网格地图</a></p>
+              <p align="left"><a href="https://wx.zahlwyy.cn" class="rest-site-link" target="_blank">政务微信</a></p>
+              <p align="left"><a href="http://www.wenjuan.in/s/Qfai2e/" class="rest-site-link" target="_blank">满意度</a></p>
+              <p align="left"><a href="http://www.qhce.gov.cn/student/student!index.action?sly=shouye" class="rest-site-link" target="_blank">干部网学院</a></p>
+              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <div id="category-best-news" class="sites-category">
+                <h2 align="left" class="heading">媒体</h2>
+              </div>
+              <div class="sites-list">
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.bloomberg.com&#39;])" href="http://www.bloomberg.com"> Bloomberg </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.cnn.com/&#39;])" href="https://www.cnn.com/"> CNN </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.dw.com/zh&#39;])" href="http://www.dw.com/zh"> 德国之声 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cnnews.chosun.com&#39;])" href="http://cnnews.chosun.com"> 朝鲜日报 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.economist.com/&#39;])" href="https://www.economist.com/"> 经济学人 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://asahichinese-j.com/&#39;])" href="http://asahichinese-j.com/"> 朝日新闻</a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://zaobao.com&#39;])" href="http://zaobao.com"> 联合早报 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://bbc.co.uk/chinese/&#39;])" href="https://www.bbc.com/zhongwen/simp"> BBC中文网 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.ftchinese.com&#39;])" href="http://www.ftchinese.com"> FT中文网 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.mirrorbooks.com&#39;])" href="http://www.mirrorbooks.com"> 明镜网 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cn.nytimes.com&#39;])" href="http://cn.nytimes.com"> 纽约时报 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://chinese.rfi.fr&#39;])" href="http://chinese.rfi.fr"> 法国广播电台 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.huffingtonpost.com&#39;])" href="http://www.huffingtonpost.com"> 赫芬顿邮报 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.time.com/&#39;])" href="http://www.time.com/"> TIME </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cn.wsj.com&#39;])" href="http://cn.wsj.com"> 华尔街日报 </a> </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-news-agency" class="sites-category">
+                  <h2 align="left" class="heading">通讯</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cn.reuters.com&#39;])" href="http://cn.reuters.com"> 路透社 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.ap.org/&#39;])" href="https://www.ap.org/"> 美联社 </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-forum" class="sites-category">
+                  <h2 align="left" class="heading"> 社区论坛</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.reddit.com/&#39;])" href="https://www.reddit.com/"> Reddit </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.deviantart.com/&#39;])" href="https://www.deviantart.com/"> DeviantART </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.v2ex.com/&#39;])" href="https://www.v2ex.com/"> V2EX </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://imgur.com/&#39;])" href="https://imgur.com/"> Imgur </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-blog" class="sites-category">
+                  <h2 align="left" class="heading"> 博客/自媒体</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://letscorp.net&#39;])" href="http://letscorp.net"> 墙外楼 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://freeweibo.com&#39;])" href="http://freeweibo.com"> 自由微博 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://bloglovin.com&#39;])" href="http://bloglovin.com"> Bloglovin </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.rapbull.net&#39;])" href="http://www.rapbull.net"> 公牛挤奶 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://aomiwang.com&#39;])" href="http://aomiwang.com"> 奥秘网 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://pao-pao.net&#39;])" href="http://pao-pao.net"> 泡泡 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://myspace.com&#39;])" href="http://myspace.com"> MySpace </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.inxian.com&#39;])" href="http://www.inxian.com"> 在西安 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://chinese.engadget.com/&#39;])" href="https://chinese.engadget.com/"> engadget </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://qiwen.lu&#39;])" href="http://qiwen.lu"> 奇闻录 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://xanga.com&#39;])" href="http://xanga.com"> Xanga </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mysinablog.com&#39;])" href="http://mysinablog.com"> 新浪海外 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://blogcatalog.com&#39;])" href="http://blogcatalog.com"> Blogcatalog </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://kenengba.com&#39;])" href="http://kenengba.com"> 可能吧 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://zimbio.com&#39;])" href="http://zimbio.com"> Zimbio </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wordpress.org&#39;])" href="http://wordpress.org"> Wordpress</a></div>
+                  </div>
+                  <div class="each-site">
+                    <p align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://blogspot.com&#39;])" href="http://blogspot.com">Blogger </a></p>
+                    <div class="sites-group">
+                      <div id="category-best-group" class="sites-category">
+                        <h2 align="left" class="heading">新闻</h2>
+                      </div>
+                      <div class="sites-list">
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.voachinese.com&#39;])" href="http://www.voachinese.com"> 美国之音 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wrchina.org&#39;])" href="http://wrchina.org"> 中国妇权 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://bannedbook.org&#39;])" href="http://bannedbook.org"> 禁书网 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://avaaz.org&#39;])" href="http://avaaz.org"> AVAAZ </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.hrw.org/zh-hans&#39;])" href="http://www.hrw.org/zh-hans"> 人权观察 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://gopetition.com&#39;])" href="http://gopetition.com"> Gopetition </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://amnesty.org&#39;])" href="http://amnesty.org"> 大赦国际 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://globalvoicesonline.org&#39;])" href="http://globalvoicesonline.org"> 全球之声 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://rferl.org&#39;])" href="http://rferl.org"> 自由欧洲 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://opendemocracy.net&#39;])" href="http://opendemocracy.net"> OpenDemocracy </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://aboluowang.com&#39;])" href="http://aboluowang.com"> 阿波罗网 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://redchinacn.org&#39;])" href="http://redchinacn.org"> 红色中国 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://rsf.org&#39;])" href="http://rsf.org"> 无国界记者 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wikileaks.org&#39;])" href="http://wikileaks.org"> 维基解密 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cryptome.org&#39;])" href="http://cryptome.org"> CRYPTOME </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cnd.org&#39;])" href="http://cnd.org"> 华夏文摘 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://rfa.org/mandarin/&#39;])" href="http://rfa.org/mandarin/"> 自由亚洲 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://botanwang.com&#39;])" href="http://botanwang.com"> 博谈网 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://change.org&#39;])" href="http://change.org"> Change </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://open.com.hk&#39;])" href="http://open.com.hk"> 开放杂志 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://chinainperspective.com&#39;])" href="http://chinainperspective.com"> 纵览中国 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.molihua.org&#39;])" href="http://www.molihua.org"> 中国茉莉花 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://nobelprize.org&#39;])" href="http://nobelprize.org"> 诺贝尔奖 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hjclub.info&#39;])" href="http://hjclub.info"> 海纳百川 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://causes.com&#39;])" href="http://causes.com"> Causes </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://centralnation.com&#39;])" href="http://centralnation.com"> 中国失土收复同盟 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://chinesepen.org&#39;])" href="http://chinesepen.org"> 独立中文笔会 </a> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sites-group">
+                      <div id="category-best-ngo" class="sites-category">
+                        <div class="link-section">
+                          <h2 align="left" class="link-section-title">新闻媒体</h2>
+                          <div class="link-list">
+                            <div class="link">
+                              <div align="left"><a href="https://cn.nytimes.com/" target="_blank">纽约时报中文网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://bbc.co.uk/chinese/" target="_blank">BBC中文网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://cn.reuters.com/" target="_blank">路透社中文网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://cn.wsj.com/" target="_blank">华尔街日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.dw.com/zh" target="_blank">德国之声</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://chinese.rfi.fr/" target="_blank">法国广播电台</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://cnnews.chosun.com/" target="_blank">朝鲜日报网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://china.kyodonews.net/" target="_blank">日本共同网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://asahichinese-f.com/" target="_blank">朝日新闻中文网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.zaobao.com.sg/" target="_blank">新加坡联合早报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://hk.appledaily.com/" target="_blank">香港苹果日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.mingpao.com/" target="_blank">香港明报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://udn.com/" target="_blank">台湾联合新闻网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.cna.com.tw/" target="_blank">台湾中央通讯社</a></div>
+                            </div>
+                          </div>
+                          <div align="left">
+                              <!-- end link list -->
+                            </div>
+                            <div id="category-regions-america" class="sites-category">
+                            <h2 align="left" class="heading">北美</h2>
+                          </div>
+                          <div class="sites-list">
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.sfchronicle.com/&#39;])" href="https://www.sfchronicle.com/"> 旧金山晚报 </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.htkou.net&#39;])" href="http://www.htkou.net"> 胡同口 </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://forum.yorkbbs.ca&#39;])" href="http://forum.yorkbbs.ca"> 约克论坛 </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://newyorker.com&#39;])" href="http://newyorker.com"> The New Yorker </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.mitbbs.com&#39;])" href="http://www.mitbbs.com"> 未名空间 </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://foreignpolicy.com&#39;])" href="http://foreignpolicy.com"> 外交政策 </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.westca.com/&#39;])" href="http://www.westca.com/"> 加西网 </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://aolnews.com&#39;])" href="http://aolnews.com"> AOL news </a> </div>
+                            </div>
+                            <div class="each-site"> 
+                              <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://westca.com&#39;])" href="http://westca.com"> 加西网 </a></div>
+                            </div>
+                          </div>
+                          </div>
+                        <div align="left">
+                            <!-- end link section -->
+                            <!-- begin link section -->
+                          </div>
+                          <div class="link-section">
+                          <h2 align="left" class="link-section-title">新闻媒体（外文）</h2>
+                          <!-- begin link list -->
+                          <div class="link-list">
+                            <div class="link">
+                              <div align="left"><a href="https://www.nytimes.com/" target="_blank">The New York Times</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.reuters.com/" target="_blank">Reuters</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.bbc.com/" target="_blank">BBC</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.independent.co.uk/" target="_blank">The Independent</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://time.com/" target="_blank">Time</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.wsj.com/" target="_blank">The Wall Street Journal</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://economist.com" target="_blank">The Economist</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.aolnews.com/" target="_blank">AOL News</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.newyorker.com/" target="_blank">The New Yorker</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.lemonde.fr/" target="_blank">Le Monde</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.lequipe.fr/" target="_blank">L'ÉQUIPE</a></div>
+                            </div>
+                          </div>
+                          <div align="left">
+                              <!-- end link list -->
+                            </div>
+                          </div>
+                        <div align="left">
+                            <!-- end link section -->
+                            <!-- begin link section -->
+                          </div>
+                          <div class="link-section">
+                          <h2 align="left" class="link-section-title">信息查询</h2>
+                          <!-- begin link list -->
+                          <div class="link-list">
+                            <div class="link">
+                              <div align="left"><a href="https://www.google.com/" target="_blank">Google</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://zh.wikipedia.org/" target="_blank">维基百科中文</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://wikileaks.org/" target="_blank">WikiLeaks</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://archive.org/" target="_blank">Internet Archive</a></div>
+                            </div>
+                          </div>
+                          <div align="left">
+                              <!-- end link list -->
+                            </div>
+                          </div>
+                        <div align="left">
+                            <!-- end link section -->
+                            <!-- begin link section -->
+                          </div>
+                          <div class="link-section">
+                          <h2 align="left" class="link-section-title">香港网站</h2>
+                          <!-- begin link list -->
+                          <div class="link-list">
+                            <div class="link">
+                              <div align="left"><a href="https://hk.appledaily.com/" target="_blank">苹果日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.mingpao.com/" target="_blank">明报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.thestandnews.com/" target="_blank">立场新闻</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://theinitium.com/" target="_blank">端传媒</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.hk01.com/" target="_blank">香港01</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.scmp.com/hk" target="_blank">南华早报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://lihkg.com/" target="_blank">连登讨论区</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.discuss.com.hk/" target="_blank">香港讨论区</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://hkgolden.com/" target="_blank">高登讨论区</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.uwants.com/" target="_blank">Uwants讨论区</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.rthk.hk/" target="_blank">香港电台</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://std.stheadline.com/" target="_blank">星岛日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.scmp.com/" target="_blank">South China Morning Post</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://orientaldaily.on.cc/" target="_blank">东方日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.wenweipo.com/" target="_blank">文汇报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.takungpao.com/" target="_blank">大公报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.post852.com/" target="_blank">852邮报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.i-cable.com/" target="_blank">有线电视</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://mingpaomonthly.com/" target="_blank">明报月刊</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.yzzk.com/" target="_blank">亚洲周刊</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://hk.next.nextmedia.com/" target="_blank">壹周刊</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://hk.etw.nextmedia.com/" target="_blank">饮食男女</a></div>
+                            </div>
+                          </div>
+                          <div align="left">
+                              <!-- end link list -->
+                            </div>
+                          </div>
+                        <div align="left">
+                            <!-- end link section -->
+                          </div>
+                          <div class="banner-728 banner-in-listing mb-3"> </div>
+                        <!-- begin link section -->
+                        <div class="link-section">
+                          <h2 align="left" class="link-section-title">台湾网站</h2>
+                          <!-- begin link list -->
+                          <div class="link-list">
+                            <div class="link">
+                              <div align="left"><a href="https://udn.com/" target="_blank">联合新闻网</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.cna.com.tw/" target="_blank">中央通讯社</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://www.pixnet.net/" target="_blank">痞客邦</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://tw.yahoo.com/" target="_blank">Yahoo!奇摩</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.yam.com/" target="_blank">番薯藤</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://eyny.com/" target="_blank">伊莉讨论区</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.cdns.com.tw/" target="_blank">中华日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.ltn.com.tw/" target="_blank">自由时报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://edn.udn.com/" target="_blank">经济日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.storm.mg/" target="_blank">风传媒</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.cw.com.tw/" target="_blank">天下杂志</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.gvm.com.tw/" target="_blank">远见杂志</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.appledaily.com.tw/" target="_blank">苹果日报</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.nextmag.com.tw/" target="_blank">壹周刊</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.mobile01.com/" target="_blank">Mobile01</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="https://newtalk.tw/" target="_blank">新头壳</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.thenewslens.com/" target="_blank">关键媒体</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.ettoday.net/" target="_blank">东森新闻</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.cts.com.tw/" target="_blank">华视</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.youmaker.com/video/index.html?code=b5" target="_blank">优美客</a></div>
+                            </div>
+                            <div class="link">
+                              <div align="left"><a href="http://www.gamebase.com.tw/" target="_blank">游戏基地</a></div>
+                            </div>
+                          </div>
+                          <div align="left">
+                              <!-- end link list -->
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sites-group">
+                      <div id="category-regions-eu" class="sites-category">
+                        <h2 align="left" class="heading">欧洲</h2>
+                      </div>
+                      <div class="sites-list">
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.lemonde.fr/&#39;])" href="http://www.lemonde.fr/"> Le Monde 世界报 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://thetimes.co.uk&#39;])" href="http://thetimes.co.uk"> 泰晤士报 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.oushinet.com/&#39;])" href="http://www.oushinet.com/"> 欧洲时报 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.guardian.co.uk&#39;])" href="http://www.guardian.co.uk"> The Guardian </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://powerapple.com&#39;])" href="http://powerapple.com"> 苹果论坛 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.nrk.no/&#39;])" href="https://www.nrk.no/"> NRK 挪威广播 </a> </div>
+                        </div>
+                        <div class="each-site"> 
+                          <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;国家报&#39;])" href="国家报"> EL PAIS 国家报 </a> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sites-group">
+                      <div id="category-regions-america" class="sites-category">
+                        <h2 align="left" class="heading">&nbsp;</h2>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              </div></td>
+          <td width="96"><div class="rest-site-title style15 style16 style17">
+              </div>
+              <div class="rest-site-title style15 style16 style17">
+                <div align="left">科技 </div>
+              </div>
+              <p align="left"><a href="http://www.icpcw.com/" class="rest-site-link" target="_blank">电脑报</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.cfan.com.cn/" class="rest-site-link" target="_blank">电脑爱好者</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://cn.engadget.com/" class="rest-site-link" target="_blank">瘾科技</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.ifanr.com/" class="rest-site-link" target="_blank">爱范儿</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.techweb.com.cn/" class="rest-site-link" target="_blank">TechWeb</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://36kr.com/" class="rest-site-link" target="_blank">36氪</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.pingwest.com/" class="rest-site-link" target="_blank">品玩</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.leiphone.com/" class="rest-site-link" target="_blank">雷锋网</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.guokr.com/" class="rest-site-link" target="_blank">果壳网</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.ikanchai.com" class="rest-site-link" target="_blank">砍柴网</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.87870.com/" class="rest-site-link" target="_blank">87870虚拟</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.51cto.com/" class="rest-site-link" target="_blank">51CTO</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.csdn.net/" class="rest-site-link" target="_blank">CSDN开发</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.cocoachina.com/" class="rest-site-link" target="_blank">cocoachina</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.bejson.com/" class="rest-site-link" target="_blank">json解析</a></p>
+              <p align="left"><a href="http://reactnative.cn/" class="rest-site-link" target="_blank">react native</a></p>
+              <p align="left"><a href="http://www.guandao.cc/" class="rest-site-link" target="_blank">观道app</a></p>
+              <p align="left"><a href="https://www.itsk.com" class="rest-site-link" target="_blank">IT天空</a></p>
+              <p align="left"><a href="http://www.win7china.com/" class="rest-site-link" target="_blank">Win7之家</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.win8china.com/" class="rest-site-link" target="_blank">win8之家</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://apk.hiapk.com/" class="rest-site-link" target="_blank">安卓市场</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.startos.org/" class="rest-site-link" target="_blank">StartOS</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.ithome.com/" class="rest-site-link" target="_blank">IT之家</a></p>
+              <p align="left"><a href="http://www.cr173.com/" class="rest-site-link" target="_blank">西西软件</a></p>
+              <p align="left"><a href="https://www.appinn.com" class="rest-site-link" target="_blank">小众软件</a></p>
+              <p align="left"><a href="https://www.iplaysoft.com" class="rest-site-link" target="_blank">异次元软件</a></p>
+              <p align="left">&nbsp;</p>              <div id="category-best-reading" class="sites-category">
+                <h2 align="left" class="heading">聚合</h2>
+              </div>
+              <div class="sites-list">
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mashable.com&#39;])" href="http://mashable.com"> Mashable </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://chinadigitaltimes.net/chinese/&#39;])" href="http://chinadigitaltimes.net/chinese/"> 中国数字时代</a>
+                  </div>
+                  <div class="each-site">
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://chinadigitaltimes.net/chinese/&#39;])" href="http://chinadigitaltimes.net/chinese/"> </a> </div>
+                  </div>
+                    <div class="each-site"> 
+                      <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://6park.com&#39;])" href="blog.dayabook.com"> 看中国</a><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://chinadigitaltimes.net/chinese/&#39;])" href="http://chinadigitaltimes.net/chinese/"> </a> </div>
+                    </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://6park.com&#39;])" href="http://6park.com"> 留园网 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://backchina.com&#39;])" href="http://backchina.com"> 倍可亲 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://flipboard.com/&#39;])" href="https://flipboard.com/"> Flipboard </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://rd.com&#39;])" href="http://rd.com"> 读者文摘 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://popyard.org&#39;])" href="http://popyard.org"> 八阙 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://have8.com&#39;])" href="http://have8.com"> 有吧 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://boxun.com&#39;])" href="http://boxun.com"> 博讯新闻网 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://creaders.net&#39;])" href="http://creaders.net"> 万维读者网 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://scribd.com&#39;])" href="http://scribd.com"> Scribd </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://dwnews.com&#39;])" href="http://dwnews.com"> 多维新闻 </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://goodreads.com&#39;])" href="http://goodreads.com"> goodreads </a> </div>
+                </div>
+                <div class="each-site"> 
+                  <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wenxuecity.com&#39;])" href="http://wenxuecity.com"> 文学城 </a></div>
+                </div>
+              </div>              <div class="sites-group">
+                <div id="category-best-communicate" class="sites-category">
+                  <h2 align="left" class="heading">即时通讯</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.kakaocorp.com/&#39;])" href="https://www.kakaocorp.com/"> KakaoTalk </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.snapchat.com/&#39;])" href="https://www.snapchat.com/"> Snapchat </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.whatsapp.com/&#39;])" href="https://www.whatsapp.com/"> WhatsApp </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://telegram.org/&#39;])" href="https://telegram.org/"> Telegram </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.viber.com/&#39;])" href="https://www.viber.com/"> Viber </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://line.me/&#39;])" href="https://line.me/"> LINE </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-social-network" class="sites-category">
+                  <h2 align="left" class="heading"> 社交</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://plus.google.com&#39;])" href="http://plus.google.com"> Google+ </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.ning.com/&#39;])" href="https://www.ning.com/"> Ning </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://twitter.com&#39;])" href="http://twitter.com"> Twitter </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://facebook.com&#39;])" href="http://facebook.com"> Facebook </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.pinterest.com&#39;])" href="https://www.pinterest.com"> Pinterest </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://instagram.com&#39;])" href="http://instagram.com"> instagram </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://badoo.com&#39;])" href="http://badoo.com"> Badoo </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://xing.com&#39;])" href="http://xing.com"> Xing </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.tumblr.com&#39;])" href="http://www.tumblr.com"> tumblr </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://tagged.com&#39;])" href="http://tagged.com"> Tagged </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://bebo.com&#39;])" href="http://bebo.com"> Bebo </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://twicsy.com&#39;])" href="http://twicsy.com"> Twicsy </a> </div>
+                  </div>
+                </div>
+              </div>              <div class="sites-group">
+                <div id="category-best-ngo" class="sites-category">
+                  <h2 align="left" class="heading">NGO</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.greenpeace.org.cn/&#39;])" href="http://www.greenpeace.org.cn/"> 绿色和平 </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-internet-service" class="sites-category">
+                  <h2 align="left" class="heading"> 网络服务</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hostlogr.com&#39;])" href="http://hostlogr.com"> Hostlogr </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.aircrack-ng.org/&#39;])" href="http://www.aircrack-ng.org/"> Aircrack-NG </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://torproject.org&#39;])" href="http://torproject.org"> TorProject </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://ohloh.net&#39;])" href="http://ohloh.net"> Ohloh </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mail-archive.com&#39;])" href="http://mail-archive.com"> mail-archive </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://aboutus.org&#39;])" href="http://aboutus.org"> Aboutus </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://archive.org&#39;])" href="http://archive.org"> 互联网档案馆 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://igfw.net&#39;])" href="http://igfw.net"> IGFW </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.chinagfw.org&#39;])" href="http://www.chinagfw.org"> 功夫网与翻墙 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://fc2.com&#39;])" href="http://fc2.com"> FC2 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://domaintools.com&#39;])" href="http://domaintools.com"> Domaintools </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://proxy.org&#39;])" href="http://proxy.org"> Proxy </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-technology" class="sites-category">
+                  <h2 align="left" class="heading"> 科技</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wikisource.org&#39;])" href="http://wikisource.org"> 维基文库 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://golang.org&#39;])" href="http://golang.org"> Go编程语言 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.nasa.gov&#39;])" href="http://www.nasa.gov"> NASA </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://khanacademy.org&#39;])" href="http://khanacademy.org"> khanacademy </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cambridgeesol.org&#39;])" href="http://cambridgeesol.org"> Cambridge ESOL </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://scholar.google.com&#39;])" href="http://scholar.google.com"> 谷歌学术 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://unicode.org&#39;])" href="http://unicode.org"> Unicode </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.coursera.org&#39;])" href="http://www.coursera.org"> Coursera </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://udacity.com&#39;])" href="http://udacity.com"> udacity </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.android.com&#39;])" href="http://www.android.com"> Android </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://sourceforge.net/&#39;])" href="https://sourceforge.net/"> SourceForge </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://github.com&#39;])" href="http://github.com"> github.com </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wikipedia.org&#39;])" href="http://wikipedia.org"> 维基百科 </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-regions-taiwan" class="sites-category">
+                  <h2 align="left" class="heading">视频/流媒体</h2>
+                </div>
+              </div>
+              <div class="sites-group"><div id="category-best-video" class="sites-category"></div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://video.ibm.com/&#39;])" href="https://video.ibm.com/"> Ustream </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://tv.com&#39;])" href="http://tv.com"> TV.com </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://blinkx.com&#39;])" href="http://blinkx.com"> Blinkx </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hgtv.com&#39;])" href="http://hgtv.com"> HGTV </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mefeedia.com&#39;])" href="http://mefeedia.com"> Mefeedia </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hulu.com&#39;])" href="http://hulu.com"> Hulu </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://c-spanvideo.org&#39;])" href="http://c-spanvideo.org"> C-SPAN </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.cc.com/&#39;])" href="http://www.cc.com/"> Comedy Central </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://blip.tv&#39;])" href="http://blip.tv"> Blip </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://ugo.com&#39;])" href="http://ugo.com"> UGO </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://monkeysee.com&#39;])" href="http://monkeysee.com"> Monkey See </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://vimeo.com&#39;])" href="http://vimeo.com"> Vimeo </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://viddler.com&#39;])" href="http://viddler.com"> Viddler </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://dailymotion.com&#39;])" href="http://dailymotion.com"> Dailymotion </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://stupidvideos.com&#39;])" href="http://stupidvideos.com"> Stupidvideos </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://youtube.com&#39;])" href="http://youtube.com"> Youtube </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://netflix.com&#39;])" href="http://netflix.com"> Netflix </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wwitv.com&#39;])" href="http://wwitv.com"> wwiTV </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mtv.co.uk&#39;])" href="http://mtv.co.uk"> MTV UK </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://video.pbs.org&#39;])" href="http://video.pbs.org"> PBS </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://yidio.com&#39;])" href="http://yidio.com"> Yidio </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://abc.go.com/&#39;])" href="http://abc.go.com/"> ABC </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://pandora.tv&#39;])" href="http://pandora.tv"> Pandora </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-location" class="sites-category">
+                  <div class="sites-group">
+                    <div id="category-regions-taiwan" class="sites-category">
+                      <h2 align="left" class="heading">台湾</h2>
+                    </div>
+                  </div>
+                  <div class="sites-group">
+                    <div class="sites-list">
+                      <div class="each-site">
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://nextmedia.com&#39;])" href="http://nextmedia.com">壹傳媒 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.storm.mg/&#39;])" href="http://www.storm.mg/"> 风传媒 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.yam.com&#39;])" href="http://www.yam.com"> 番薯藤 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://ck101.com&#39;])" href="http://ck101.com"> 卡提诺论坛 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://plurk.com&#39;])" href="http://plurk.com"> Plurk </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://nexttv.com.tw&#39;])" href="http://nexttv.com.tw"> 壹电视 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://libertytimes.com.tw&#39;])" href="http://libertytimes.com.tw"> 自由时报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://newtalk.tw&#39;])" href="http://newtalk.tw"> 新头壳 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://uncyclopedia.tw&#39;])" href="http://uncyclopedia.tw"> 伪基百科 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.cw.com.tw/&#39;])" href="https://www.cw.com.tw/"> 天下杂志 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://tw.gigacircle.com&#39;])" href="http://tw.gigacircle.com"> Giga Circle </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://oursogo.com&#39;])" href="http://oursogo.com"> SOGO论坛 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://cna.com.tw&#39;])" href="http://cna.com.tw"> 中央社 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://eyny.com&#39;])" href="http://eyny.com"> 伊莉讨论区 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://tw.yahoo.com&#39;])" href="http://tw.yahoo.com"> Yahoo奇摩 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://pcdvd.com.tw&#39;])" href="http://pcdvd.com.tw"> PCDVD </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.gvm.com.tw/&#39;])" href="https://www.gvm.com.tw/"> 远见杂志 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://crossing.cw.com.tw/&#39;])" href="https://crossing.cw.com.tw/"> 换日线 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://gamer.com.tw&#39;])" href="http://gamer.com.tw"> 巴哈姆特 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://udn.com&#39;])" href="http://udn.com"> 联合新闻网 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://disp.cc&#39;])" href="http://disp.cc"> disp BBS </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://la-forum.org&#39;])" href="http://la-forum.org"> LA讨论区 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.tvbs.com/&#39;])" href="http://www.tvbs.com/"> TVBS </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://ettoday.net&#39;])" href="http://ettoday.net"> 东森新闻 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.chinatimes.com/&#39;])" href="http://www.chinatimes.com/"> 中时电子报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://worldjournal.com&#39;])" href="http://worldjournal.com"> 世界日报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.cnyes.com/&#39;])" href="https://www.cnyes.com/"> 钜亨网 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.youthwant.com.tw/&#39;])" href="http://www.youthwant.com.tw/"> 优仕网 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://pixnet.net&#39;])" href="http://pixnet.net"> 痞客帮 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mobile01.com&#39;])" href="http://mobile01.com"> Mobile01 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://coolaler.com&#39;])" href="http://coolaler.com"> 沧者极限 </a> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sites-group">
+                    <div id="category-regions-hongkong" class="sites-category">
+                      <h2 align="left" class="heading"> 香港</h2>
+                    </div>
+                    <div class="sites-list">
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://exmoo.com&#39;])" href="http://exmoo.com"> 力报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://rthk.hk&#39;])" href="http://rthk.hk"> 香港电台 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://singtao.com&#39;])" href="http://singtao.com"> 星岛日报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.post852.com&#39;])" href="http://www.post852.com"> 852邮报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.scmp.com/&#39;])" href="http://www.scmp.com/"> 南华早报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.881903.com/&#39;])" href="http://www.881903.com/"> 香港商业电台 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://etw.nextdigital.com.hk/&#39;])" href="https://etw.nextdigital.com.hk/"> 饮食男女 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hkgolden.com&#39;])" href="http://hkgolden.com"> 香港高登 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.bastillepost.com/hongkong/&#39;])" href="http://www.bastillepost.com/hongkong/"> 巴士的报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wenweipo.com&#39;])" href="http://wenweipo.com"> 香港文汇报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.metrodaily.hk/&#39;])" href="http://www.metrodaily.hk/"> Metro </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.i-cable.com/&#39;])" href="http://www.i-cable.com/"> 香港有线电视 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://nextplus.nextmedia.com/&#39;])" href="http://nextplus.nextmedia.com/"> 壹周刊 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://theinitium.com/&#39;])" href="https://theinitium.com/"> 端传媒 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mingpao.com&#39;])" href="http://mingpao.com"> 明报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hk.apple.nextmedia.com&#39;])" href="http://hk.apple.nextmedia.com"> 苹果日报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.metroradio.com.hk/&#39;])" href="http://www.metroradio.com.hk/"> 新城电台 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.hkej.com/&#39;])" href="http://www.hkej.com/"> 信报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://yzzk.com&#39;])" href="http://yzzk.com"> 亚洲周刊 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.discuss.com.hk&#39;])" href="http://www.discuss.com.hk"> 香港讨论区 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hd.stheadline.com/&#39;])" href="http://hd.stheadline.com/"> 头条日报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://orientaldaily.on.cc/&#39;])" href="http://orientaldaily.on.cc/"> 东方日报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hk.on.cc/&#39;])" href="http://hk.on.cc/"> 东网 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.am730.com.hk/&#39;])" href="https://www.am730.com.hk/"> am730 </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sites-group">
+                    <div id="category-regions-japan" class="sites-category">
+                      <h2 align="left" class="heading">日韩</h2>
+                    </div>
+                    <div class="sites-list">
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.pixiv.net/&#39;])" href="https://www.pixiv.net/"> pixiv </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.chubun.com/&#39;])" href="http://www.chubun.com/"> 中文导报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.nikkei.co.jp/&#39;])" href="http://www.nikkei.co.jp/"> 日本经济新闻 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.yomiuri.co.jp/&#39;])" href="http://www.yomiuri.co.jp/"> 读卖新闻 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://daolan.net&#39;])" href="http://daolan.net"> 道兰字幕组 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://soompi.com&#39;])" href="http://soompi.com"> soompi </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://fooooo.com&#39;])" href="http://fooooo.com"> Fooooo </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.livedoor.com/&#39;])" href="http://www.livedoor.com/"> 活力门 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://niconico.jp&#39;])" href="http://niconico.jp"> NICONICO动画 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.baidu.jp&#39;])" href="http://www.baidu.jp"> 百度日本 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.xiaochuncnjp.com&#39;])" href="http://www.xiaochuncnjp.com"> 小春网 </a> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sites-group">
+                    <div id="category-regions-southeast-asia" class="sites-category">
+                      <h2 align="left" class="heading"> 东南亚</h2>
+                    </div>
+                    <div class="sites-list">
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.orientaldaily.com.my/&#39;])" href="http://www.orientaldaily.com.my/"> 东方网 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.kwongwah.com.my/&#39;])" href="http://www.kwongwah.com.my/"> 光华日报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://jbtalks.cc&#39;])" href="http://jbtalks.cc"> Jbtalks </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.chinapress.com.my/&#39;])" href="http://www.chinapress.com.my/"> 中国报 </a> </div>
+                      </div>
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://news.nanyangpost.com/&#39;])" href="http://news.nanyangpost.com/"> 南洋视界 </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sites-group">
+                    <div id="category-regions-america" class="sites-category">
+                      <h2 align="left" class="heading">澳大利亚</h2>
+                    </div>
+                  </div>
+                  <div class="sites-group">
+                    <div id="category-regions-australia" class="sites-category"></div>
+                    <div class="sites-list">
+                      <div class="each-site"> 
+                        <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.sydneytoday.com/&#39;])" href="http://www.sydneytoday.com/"> 今日悉尼 </a> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 align="left" class="heading">&nbsp; </h2>
+                </div>
+              </div>
+              <div class="sites-group"><div class="sites-list"></div>
+              </div>              <p align="left">&nbsp;</p></td>
+          <td width="108"><div class="rest-site-title style15 style16 style17">
+              </div>
+              <div class="rest-site-title style15 style16 style17">
+                <div align="left">其他</div>
+              </div>
+              <p align="left"><a href="http://benyouhui.it168.com/" class="rest-site-link" target="_blank">本友会</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://bbs.mydigit.cn/" class="rest-site-link" target="_blank">数码之家</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.dgtle.com/" class="rest-site-link" target="_blank">数字尾巴</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="https://www.chiphell.com/portal.php" class="rest-site-link" target="_blank">Chiphell</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://ww.xitek.com/" class="rest-site-link" target="_blank">色影无忌</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.fengniao.com/" class="rest-site-link" target="_blank">蜂鸟网</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.macx.cn/" class="rest-site-link" target="_blank">MacX苹果</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.soomal.com/doc/index101000_0001_00.htm" class="rest-site-link" target="_blank">数码多</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.igao7.com/" class="rest-site-link" target="_blank">爱搞机</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.lovebizhi.com/" class="rest-site-link" target="_blank">爱壁纸</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.135editor.com/" class="rest-site-link" target="_blank">135编辑器</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://www.newrank.cn/" class="rest-site-link" target="_blank">新榜</a></p>
+              <p align="left"><span class="rest-site-line"></span><a href="http://naotu.baidu.com/" class="rest-site-link" target="_blank">百度脑图</a></p>
+              <p align="left"><a href="http://www.zealer.com/" class="rest-site-link" target="_blank">ZEALER</a></p>
+              <p align="left"><a href="http://www.pcpop.com/" class="rest-site-link" target="_blank">泡泡网</a></p>
+              <p align="left"><a href="https://koolshare.cn/portal.php" class="rest-site-link" target="_blank">koolshare</a></p>
+              <p align="left"><a href="https://www.baacloud47.com/modules/login.php" class="rest-site-link" target="_blank">baacloud</a></p>
+              <p align="left"><a href="https://www.jicloud.online/" class="rest-site-link" target="_blank">jicloud</a></p>
+              <p align="left"><a href="https://github.com/" class="rest-site-link" target="_blank">Github</a></p>
+              <p align="left"><a href="http://ss.pythonic.life/" class="rest-site-link" target="_blank">pythonic</a></p>
+              <p align="left"><a href="https://www.freevpnnet.com" class="rest-site-link" target="_blank">freevpnnet</a></p>
+              <p align="left"><a href="https://www.ifanqiang.com/" class="rest-site-link" target="_blank">ifq</a></p>
+              <p align="left"><a href="https://www.fanqiangzhe.com/" class="rest-site-link" target="_blank">fqz</a></p>
+              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <div class="link-section">
+                <h2 align="left" class="link-section-title">影图</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://youtube.com/" target="_blank">Youtube</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://vimeo.com/" target="_blank">Vimeo</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.netflix.com/" target="_blank">Netflix</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.hulu.com/" target="_blank">Hulu</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://pandora.tv/" target="_blank">Pandora</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.dailymotion.com/" target="_blank">Dailymotion</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://photos.google.com/" target="_blank">Google Photos</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://soundcloud.com/" target="_blank">SoundCloud</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.shutterstock.com/" target="_blank">Shutterstock</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.istockphoto.com/" target="_blank">iStock</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://pixabay.com/" target="_blank">Pixabay</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                  <!-- end link list -->
+                </div>
+              </div>
+              <div align="left">
+                <!-- end link section -->
+                <!--
+			<div class="banner-728 banner-in-listing mb-3">
+			<a href="/go/purevpn" rel="nofollow" target="_blank"><img src="/images/banners/purevpn-cn-728-90.png"></a>
+			</div>
+		-->
+                <!-- begin link section -->
+              </div>              <div class="link-list">
+                <div class="link"></div>
+                <div class="link">
+                  <div align="left"><a href="https://soundcloud.com/" target="_blank">Pinterest</a></div>
+                </div>
+              </div>
+              <div align="left">
+                <!-- end link list -->
+              </div>              <div class="link-list">
+                <div class="link"></div>
+                <div class="link">
+                  <div align="left"><a href="https://soundcloud.com/" target="_blank">SoundCloud</a></div>
+                </div>
+              </div>
+              <div align="left">
+                <!-- end link list -->
+              </div>              <div class="link-list">
+                <div class="link"></div>
+                <div class="link">
+                  <div align="left"><a href="https://soundcloud.com/" target="_blank">SoundCloud</a></div>
+                </div>
+              </div>
+              <div align="left">
+                <!-- end link list -->
+              </div>              <div class="link-section">
+                <h2 align="left" class="link-section-title">云服务</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://www.dropbox.com/" target="_blank">Dropbox</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.box.com/" target="_blank">Box</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://drive.google.com/" target="_blank">Google Drive</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://sugarsync.com/" target="_blank">SugarSync</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                    <!-- end link list -->
+                </div>
+                </div>
+              <div align="left">
+                <!-- end link section -->
+                <!-- begin link section -->
+              </div>              <div class="link-section">
+                <h2 align="left" class="link-section-title">工作协作</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://drive.google.com/" target="_blank">Google Drive</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://docs.google.com/" target="_blank">Google Docs</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://calendar.google.com/" target="_blank">Google Calendar</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://mail.google.com/" target="_blank">Gmail</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://hangouts.google.com/" target="_blank">Google Hangouts</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://slack.com/" target="_blank">Slack</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.slideshare.net/" target="_blank">SlideShare</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                    <!-- end link list -->
+                </div>
+                </div>
+              <div class="link-section">
+                <h2 align="left" class="link-section-title">海外中文门户、社区</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="http://www.creaders.net/" target="_blank">万维读者网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.6park.com/" target="_blank">留园网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.wenxuecity.com/" target="_blank">文学城</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.sinovision.net/" target="_blank">美国中文网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://chinadigitaltimes.net/chinese/" target="_blank">中国数字时代</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.backchina.com/" target="_blank">倍可亲</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://have8.com/" target="_blank">有吧</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://popyard.org/" target="_blank">八阕</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.mitbbs.com/" target="_blank">未名空间</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.ozchinese.com/" target="_blank">澳洲中文网（澳大利亚）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.iask.ca/" target="_blank">加拿大家园网（加拿大）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.yorkbbs.ca/" target="_blank">约克论坛（加拿大）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.westca.com/" target="_blank">加西网（加拿大）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.tokyocn.com/" target="_blank">东京华人网（日本）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.incnjp.com/" target="_blank">小春（日本）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.powerapple.com/" target="_blank">苹果论坛（英国）</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.ccyp.com/" target="_blank">洛杉矶华人工商网CCYP（美国）</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                  <!-- end link list -->
+                </div>
+              </div>
+              <div align="left">
+                <!-- end link section -->
+                <!-- begin link section -->
+              </div>              <div class="link-section">
+                <h2 align="left" class="link-section-title">观点</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://www.voachinese.com/" target="_blank">美国之音中文网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.bannedbook.org/" target="_blank">禁闻</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.secretchina.com/" target="_blank">看中国</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.rfa.org/mandarin/" target="_blank">自由亚洲电台</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://chinainperspective.com/" target="_blank">纵览中国</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.chinesepen.org/" target="_blank">独立中文笔会</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://news.boxun.com/" target="_blank">博讯新闻网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://chinese.rfi.fr/" target="_blank">法国广播电台</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.mingjingnews.com/" target="_blank">明镜网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://beijingspring.com/" target="_blank">北京之春</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://pao-pao.net/" target="_blank">泡泡</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.canyu.org/" target="_blank">参与网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://qiwen.lu/" target="_blank">奇闻录</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://msguancha.com/" target="_blank">民生观察</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.wrchina.org/" target="_blank">中国妇权</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://botanwang.com/" target="_blank">博谈网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://open.com.hk/" target="_blank">开放网</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://my.cnd.org/" target="_blank">华夏文摘</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="http://www.aboluowang.com/" target="_blank">阿波罗网</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                    <!-- end link list -->
+                </div>
+                </div>
+              <div align="left">
+                <!-- end link section -->
+                <!-- begin link section -->
+              </div>              <div class="link-section">
+                <h2 align="left" class="link-section-title">社交网络</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://www.facebook.com/" target="_blank">Facebook</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.twitter.com/" target="_blank">Twitter</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.instagram.com" target="_blank">Instagram</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.tumblr.com/" target="_blank">Tumblr</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://plus.google.com/" target="_blank">Google Plus</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.reddit.com/" target="_blank">Reddit</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.meetup.com/" target="_blank">Meetup</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.xing.com/" target="_blank">XING</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://hootsuite.com/" target="_blank">Hootsuite</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                    <!-- end link list -->
+                </div>
+                </div>
+              <div align="left">
+                <!-- end link section -->
+                <!-- begin link section -->
+              </div>              <div class="link-section">
+                <h2 align="left" class="link-section-title">即时通讯</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://telegram.org/" target="_blank">Telegram</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.snapchat.com/" target="_blank">Snapchat</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.whatsapp.com/" target="_blank">Whatsapp</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://line.me/" target="_blank">LINE</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                    <!-- end link list -->
+                </div>
+                </div>
+              <div align="left">
+                <!-- end link section -->
+                <!-- begin link section -->
+              </div>              <div class="link-section">
+                <h2 align="left" class="link-section-title">博客平台</h2>
+                <!-- begin link list -->
+                <div class="link-list">
+                  <div class="link">
+                    <div align="left"><a href="https://wordpress.com/" target="_blank">WordPress.com</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.blogger.com/" target="_blank">Blogger.com</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.medium.com/" target="_blank">Medium</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.tumblr.com/" target="_blank">Tumblr</a></div>
+                  </div>
+                  <div class="link">
+                    <div align="left"><a href="https://www.pixnet.net/" target="_blank">痞客邦</a></div>
+                  </div>
+                </div>
+                <div align="left">
+                    <!-- end link list -->
+                </div>
+                </div>
+              <div class="sites-group">
+                <div id="category-best-location" class="sites-category">
+                  <h2 align="left" class="heading">地理信息</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://foursquare.com&#39;])" href="http://foursquare.com"> Foursquare </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://eventful.com&#39;])" href="http://eventful.com"> Eventful </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://wikimapia.org&#39;])" href="http://wikimapia.org"> Wikimapia </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://trendsmap.com&#39;])" href="http://trendsmap.com"> Trendsmap </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-cloud" class="sites-category">
+                  <h2 align="left" class="heading"> 云服务</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://aws.amazon.com/cn/&#39;])" href="http://aws.amazon.com/cn/"> Amazon AWS </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://dropbox.com&#39;])" href="http://dropbox.com"> Dropbox </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.box.com&#39;])" href="http://www.box.com"> Box </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://cloud.google.com&#39;])" href="https://cloud.google.com"> Google Cloud </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-fileshare" class="sites-category">
+                  <h2 align="left" class="heading"> 文件托管</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.resilio.com/&#39;])" href="https://www.resilio.com/"> Resilio </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.sugarsync.com/&#39;])" href="https://www.sugarsync.com/"> SugarSync </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://4shared.com&#39;])" href="http://4shared.com"> 4Shared </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-file-share" class="sites-category">
+                  <h2 align="left" class="heading"> 文件分享</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://thepiratebay.org&#39;])" href="http://thepiratebay.org"> 海盗湾 </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://saveyoutube.com&#39;])" href="http://saveyoutube.com"> Saveyoutube </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://mp3ye.eu&#39;])" href="http://mp3ye.eu"> mp3ye </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.mediafire.com/&#39;])" href="https://www.mediafire.com/"> MediaFire </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://slideshare.net&#39;])" href="http://slideshare.net"> slideshare </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-pictures" class="sites-category">
+                  <h2 align="left" class="heading"> 图片/影像</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://flickr.com&#39;])" href="http://flickr.com"> flickr </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://webshots.com&#39;])" href="http://webshots.com"> Webshots </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://photos.google.com&#39;])" href="https://photos.google.com"> Google Foto </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-entertainment" class="sites-category">
+                  <h2 align="left" class="heading"> 娱乐</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://imdb.com&#39;])" href="http://imdb.com"> IMDb </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.nba.com&#39;])" href="http://www.nba.com"> NBA </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.twitch.tv&#39;])" href="http://www.twitch.tv"> Twitch </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://gamespot.com&#39;])" href="http://gamespot.com"> Gamespot </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://provideocoalition.com&#39;])" href="http://provideocoalition.com"> provideocoalition </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://break.com&#39;])" href="http://break.com"> Break </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-best-aggregate" class="sites-category">
+                  <h2 align="left" class="heading"> 信息聚合</h2>
+                </div>
+                <div class="sites-list">
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://hootsuite.com&#39;])" href="http://hootsuite.com"> Hootsuite </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://yasni.co.uk&#39;])" href="http://yasni.co.uk"> Yasni </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://diigo.com&#39;])" href="http://diigo.com"> Diigo </a> </div>
+                  </div>
+                  <div class="each-site"> 
+                    <div align="left"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;http://www.cl.com&#39;])" href="http://www.cl.com"> craigslist </a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="sites-group">
+                <div id="category-regions-eu" class="sites-category">
+                  <h2 align="left" class="heading">&nbsp;</h2>
+                </div>
+              </div>
+              <div class="sites-group"><div class="sites-list"></div>
+              </div>              <p align="left">&nbsp;</p>              <p align="left">&nbsp;</p>              <p align="left">&nbsp;</p>
+              <p align="left">&nbsp;</p>
+              <div class="sites-group">
+                <div id="category-best-group" class="sites-category">
+                  <h2 align="left" class="heading">&nbsp;</h2>
+                </div>
+              </div>
+              <div class="sites-group"><div id="category-best-ngo" class="sites-category">
+                <!-- end link section -->
+                <!-- begin link section -->
+<div class="link-section">
+                    <h2 align="left" class="link-section-title">&nbsp;                  </h2>
+                  </div>
+                  <h2 align="left" class="heading">&nbsp;  </h2>
+                </div>
+              </div>
+              <div class="sites-group"><div class="sites-list"></div>
+              </div>              <p align="left">&nbsp;</p></td>
+          </tr>
+      </table>
+      <div class="sites-wrapper">
+        <div class="sites-group"><div id="category-vpn" class="sites-category"></div>
+          <div class="sites-list"><div class="each-site">
+            <div class="each-site"> <a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.linkev.com/?a_fid=ifanqiang&#39;])" href="https://www.linkev.com/?a_fid=ifanqiang"> </a><span class="logo-wrapper "><span style="mso-font-kerning:0pt;" lang="EN-US" xml:lang="EN-US"><span style="mso-font-kerning:0pt;" lang="EN-US" xml:lang="EN-US"><span style="mso-font-kerning:0pt;" lang="EN-US" xml:lang="EN-US"><span style="mso-font-kerning:0pt;" lang="EN-US" xml:lang="EN-US"><span style="mso-font-kerning:0pt;" lang="EN-US" xml:lang="EN-US"><span style="mso-font-kerning:0pt;" lang="EN-US" xml:lang="EN-US"></span></span></span></span></span></span></span></div>
+                <div class="each-site"><a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://billing.purevpn.com/aff.php?aff=32855&#39;])" href="https://billing.purevpn.com/aff.php?aff=32855"> </a> </div>
+                <div class="each-site"> <a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.linkev.com/?a_fid=ifanqiang&#39;])" href="https://pan.baidu.com"> </a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="sites-group">
+          <div id="category-best-news" class="sites-category">
+            <h2 class="heading">&nbsp;</h2>
+          </div>
+          </div>
+        </div>
+      <div class="link-section">
+        <h2 class="link-section-title">比特币</h2>
+        <!-- begin link list -->
+        <div class="link-list">
+          <div class="link"><a href="/go/binance" target="_blank">币安</a></div>
+          <div class="link"><a href="http://www.okex.com/" target="_blank">OkEx</a></div>
+          <div class="link"><a href="https://otc.huobi.pro/" target="_blank">火币Pro</a></div>
+          <div class="link"><a href="https://www.bitfinex.com/" target="_blank">Bitfinex</a></div>
+          <div class="link"><a href="https://www.bitmex.com/" target="_blank">BitMEX</a></div>
+          <div class="link"><a href="https://www.kucoin.com/" target="_blank">KuCoin</a></div>
+          <div class="link"><a href="https://www.coinw.com/" target="_blank">币赢</a></div>
+          <div class="link"><a href="/go/localbitcoins-cn" target="_blank">LocalBitcoins</a></div>
+          <div class="link"><a href="/go/paxful" target="_blank">Paxful</a></div>
+        </div>
+        <!-- end link list -->
+      </div>
+      <!-- end link section -->
+      <!-- begin link section -->
+      <div class="link-section">
+        <h2 class="link-section-title">VPN</h2>
+        </div>
+      <div class="link-section"><div id="category-vpn" class="sites-category"></div>
+        <div class="sites-list">
+          <div class="each-site"> <a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://rebrand.ly/bestv641d?offer_id=278&amp;aff_id=6568&#39;])" href="https://rebrand.ly/bestv641d?offer_id=278&amp;aff_id=6568"> NordVPN </a> </div>
+          <div class="each-site"> <a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://billing.purevpn.com/aff.php?aff=32855&#39;])" href="https://billing.purevpn.com/aff.php?aff=32855"> PureVPN </a> </div>
+          <div class="each-site"> <a class="common" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;External Link&#39;, &#39;Site&#39;, &#39;https://www.linkev.com/?a_fid=ifanqiang&#39;])" href="https://www.linkev.com/?a_fid=ifanqiang"> ExpressVPN </a></div>
+        </div>
+        </div>
+      <!-- end link section -->
+      <!-- begin link section -->
+      <div class="link-section">
+        <h2 class="link-section-title">fq工具</h2>
+        <!-- begin link list -->
+        <div class="link-list">
+          <div class="link"><a href="/software" target="_blank">翻墙软件指南</a></div>
+          <div class="link"><a href="https://www.vpndada.com/best-vpns-for-china-cn/" target="_blank">翻墙VPN评测</a></div>
+          <div class="link"><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E8%A2%AB%E5%B0%81%E9%94%81%E7%BD%91%E7%AB%99%E5%88%97%E8%A1%A8" target="_blank">被墙网站列表</a></div>
+          <div class="link"><a href="http://www.greatfirewallofchina.org/" target="_blank">Great Firewall of China</a></div>
+          <div class="link"><a href="https://www.vpndada.com/" target="_blank">VPN大大</a></div>
+          <div class="link"><a href="/go/expressvpn" target="_blank">ExpressVPN</a></div>
+          <div class="link"><a href="/go/vyprvpn-cn" target="_blank">VyprVPN</a></div>
+          <div class="link"><a href="/go/nordvpn-cn" target="_blank">NordVPN</a></div>
+          <div class="link"><a href="/go/purevpn" target="_blank">PureVPN</a></div>
+          <div class="link"><a href="/go/surfshark" target="_blank">Surfshark</a></div>
+          <div class="link"><a href="https://shadowsocks.org/" target="_blank">Shadowsocks</a></div>
+          <div class="link"><a href="http://www.chinagfw.org/" target="_blank">功夫网与翻墙</a></div>
+          <div class="link"><a href="https://www.vpndada.com/vpn-into-china-cn/" target="_blank">翻墙回国</a></div>
+          <div class="link"><a href="https://www.vpndada.com/best-vpns-for-china/" target="_blank">VPN for China</a></div>
+        </div>
+        <!-- end link list -->
+        <h2><span class="ez-toc-section" id="VPN">必备VPN</span></h2>
+        <ul>
+          <li>ExpressVPN，最稳定的VPN，<a href="/go/express" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">https://www.expressvpn.com</a> </li>
+          <li>PureVPN，性价比最高的VPN， <a href="/go/pure" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">https://www.purevpn.com</a> </li>
+          <li>PandaVPN，最人性化的VPN， <a rel="noreferrer noopener" href="https://qiangwaikan.com/go/panda" target="_blank">https://www.pandavpnpro.com</a> </li>
+        </ul>
+        <p><a href="https://qiangwaikan.com/best-vpn-china/">查看详细介绍</a></p>
+        <h2><span class="ez-toc-section" id="i">日常使用</span></h2>
+        <ul>
+          <li>Instagram，国外目前最火的图片视频社交网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="http://www.instagram.com" target="_blank">http://www.instagram.com</a> </li>
+          <li>Facebook-脸书，对真实身份审核比较严格社交网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="http://www.facebook.com" target="_blank">http://www.facebook.com</a> </li>
+          <li>Twitter-推特，新浪微博的模仿对象，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="http://www.twitter.com" target="_blank">http://www.twitter.com</a> </li>
+          <li>Youtube，全球最大的视频分享网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.youtube.com" target="_blank">https://www.youtube.com</a> </li>
+          <li>Gmail，Google邮箱，<a href="https://mail.google.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://mail.google.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-2">音乐</span></h2>
+        <ul>
+          <li>Spotify，个人觉得最好的音乐软件，歌单质量很高，但是免费账户会有广告，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.spotify.com" target="_blank">https://www.spotify.com</a> </li>
+          <li>PanDoRa，国外流行的在线网络电台网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.pandora.com/" target="_blank">https://www.pandora.com</a> </li>
+          <li>SoundCloud，为热爱音乐的人设立的音乐分享平台，<a href="https://soundcloud.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://soundcloud.com</a> </li>
+        </ul>
+        <p><a href="https://qiangwaikan.com/music">查看详细介绍</a></p>
+        <h2><span class="ez-toc-section" id="i-3">视频</span></h2>
+        <ul>
+          <li>IMDB，亚马逊旗下的电影资料库，电影评分比较权威，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.imdb.com" target="_blank">https://www.imdb.com</a> </li>
+          <li>Netflix-奈飞，电影电视剧资源非常齐全，当然价格也比较感人，美国版权意识比较强，类似的影视资源都比较贵，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.netflix.com" target="_blank">https://www.netflix.com</a> </li>
+          <li>Hulu，这个网站名称比较有意思，来源于中文“葫芦” 的发音 ，是一个正版影视节目点播网站，价格同样感人，<a href="https://www.hulu.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://www.hulu.com</a> </li>
+        </ul>
+        <p><a href="https://qiangwaikan.com/video/">查看详细介绍</a></p>
+        <h2><span class="ez-toc-section" id="i-4">新闻</span></h2>
+        <ul>
+          <li>BBC-BBC中文网，英国广播公司中文网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.bbc.com/zhongwen" target="_blank">https://www.bbc.com/zhongwen</a> </li>
+          <li>Nytimes-纽约时报中文网，在纽约创办的美国日报，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://cn.nytimes.com" target="_blank">https://cn.nytimes.com</a> </li>
+          <li>Wsj-华尔街日报中文网，美国很有影响的一家报刊，<a href="https://cn.nytimes.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://cn.nytimes.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-5">即时通讯</span></h2>
+        <ul>
+          <li>WhatsApp，比微信更早的即时通讯软件，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.whatsapp.com" target="_blank">https://www.whatsapp.com</a> </li>
+          <li>Telegram，一个通讯加密的即时聊天软件，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://telegram.org" target="_blank">https://telegram.org</a> </li>
+          <li>Line，日本最流行的即时聊天软件，<a href="https://line.me" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://line.me</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-6">游戏</span></h2>
+        <ul>
+          <li>Steam，游戏购买、安装一体化平台，国内wegame的师傅，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://store.steampowered.com" target="_blank">https://store.steampowered.com</a> </li>
+          <li>战网，暴雪其下多人在线游戏平台，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.blizzard.com" target="_blank">https://www.blizzard.com</a> </li>
+          <li>Twitch.tv，国外知名游戏直播平台，<a href="https://www.twitch.tv" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://www.twitch.tv</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-7">旅行</span></h2>
+        <ul>
+          <li>TripAdvisor-猫途鹰，国外旅行分享社区，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://cn.tripadvisor.com" target="_blank">https://cn.tripadvisor.com</a> </li>
+          <li>Airbnb，全球最大的名宿在线预定网站，<a href="https://zh.airbnb.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://zh.airbnb.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-8">在线课程</span></h2>
+        <ul>
+          <li>TED，各行业领域的专家演讲视频，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.ted.com" target="_blank">https://www.ted.com</a> </li>
+          <li>Udemy，知名在线视频学习平台，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.udemy.com" target="_blank">https://www.udemy.com</a> </li>
+          <li>Coursera，全球顶尖的在线课程网站，<a href="https://www.coursera.org" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://www.coursera.org</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-9">社交</span></h2>
+        <ul>
+          <li>Snapchat，阅后即焚视频图片社交网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="http://snapchat.com" target="_blank">http://snapchat.com</a> </li>
+          <li>Tumblr-汤博乐，轻博客社交网站，有很多XX视频，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.tumblr.com" target="_blank">https://www.tumblr.com</a> </li>
+          <li>Linkedin-领英，职场社交网站，国内脉脉的始祖，<a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://www.linkedin.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-10">百科全书</span></h2>
+        <ul>
+          <li>WiKiHow，各种生活实用教程，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://zh.wikihow.com" target="_blank">https://zh.wikihow.com</a> </li>
+          <li>wikipedia-维基百科，人类知识集合，自由的百科全书，<a href="https://zh.wikipedia.org/wiki/Wiki" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://zh.wikipedia.org/wiki/Wiki</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-11">购物</span></h2>
+        <ul>
+          <li>Amazon-亚马逊，美国最大的在线购物网站， <a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.amazon.com" target="_blank">https://www.amazon.com</a> </li>
+          <li>Ebay-易贝，在线拍卖网上商城， <a href="https://www.ebay.com">http</a><a rel="noreferrer noopener" aria-label="s（在新窗口打开）" href="https://www.ebay.com" target="_blank">s</a><a href="https://www.ebay.com">://www.ebay.com</a> </li>
+          <li>PayPal，比支付宝更早的在线支付网站，往国内提现不方便，<a href="https://www.paypal.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://www.paypal.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-12">论坛</span></h2>
+        <ul>
+          <li>Reddit，热门事实社交论坛，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.reddit.com" target="_blank">https://www.reddit.com</a> </li>
+          <li>Quora，知乎就是学的它，<a href="https://www.quora.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://www.quora.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-13">个人博客</span></h2>
+        <ul>
+          <li>Blogspot，Google推出的一款免费博客发布网站，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.blogger.com" target="_blank">https://www.blogger.com</a> </li>
+          <li>Medium，长博文内容发布分享平台，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://medium.com" target="_blank">https://medium.com</a> </li>
+          <li>WordPress，PHP语言开发的开源博客系统，拥有众多模板，<a href="https://wordpress.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://wordpress.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-14">图片</span></h2>
+        <ul>
+          <li>Pixabay，免费正版高清图片素材库，真的非常好用，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://pixabay.com" target="_blank">https://pixabay.com</a> </li>
+          <li>Imgur，主要提供免费相片储存服务，用户也可以公开分享，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://imgur.com" target="_blank">https://imgur.com</a> </li>
+          <li>Pinterest，一些有创意的图片&amp;文字分享 ，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.pinterest.com" target="_blank">https://www.pinterest.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-15">杂志</span></h2>
+        <ul>
+          <li>National Geographic-国家地理杂志，关于自然生态的探索，有很多精美的图片，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.nationalgeographic.com" target="_blank">https://www.nationalgeographic.com</a> </li>
+          <li>Time-时代周刊，美国新闻杂志，每年会评定一位“年度风云人物”，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://time.com" target="_blank">https://time.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-16">工具</span></h2>
+        <ul>
+          <li>Tinypng，一个非常好用的在线图片压缩工具，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://tinypng.com" target="_blank">https://tinypng.com</a> </li>
+          <li>Smallpdf，在线PDF转换工具，<a href="https://smallpdf.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://smallpdf.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="IT">IT技术</span></h2>
+        <ul>
+          <li>StackOverflow，全球最大的IT技术问答社区，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://stackoverflow.com" target="_blank">https://stackoverflow.com</a> </li>
+          <li>GitHub，俗称全球最大的同性交友网站，一个代码托管平台，<a href="https://github.com" target="_blank" rel="noreferrer noopener" aria-label="（在新窗口打开）">https://github.com</a> </li>
+        </ul>
+        <h2><span class="ez-toc-section" id="i-17">云服务</span></h2>
+        <ul>
+          <li>Digitalocean，国外优质的云服务提供商，很多社区论坛都是托管在着上面的，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.digitalocean.com" target="_blank">https://www.digitalocean.com</a> </li>
+          <li>Godaddy，主要卖域名，也拓展有其他服务器等业务，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.godaddy.com" target="_blank">https://www.godaddy.com</a> </li>
+          <li>Google相册，免费储存照片，并且没有空间限制，会自动备份整理，无敌好用，<a rel="noreferrer noopener" aria-label="（在新窗口打开）" href="https://www.google.com/photos/about" target="_blank">https://www.google.com/photos/about</a> </li>
+          <li> Google云盘，提供15GB&nbsp;的免费存储空间，可以储存一些资料文件 <a href="https://www.google.com/intl/zh-CN_ALL/drive/">https://www.google.com/intl/zh-CN_ALL/drive/</a> </li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><span lang="EN-US" style="font-size:18px; font-family:宋体; color:blue; mso-font-kerning:0pt; font-weight: bold;">&nbsp;&nbsp;</span></p>
+    </div>
+    </form>
+    <br />
+    <p>&nbsp;</p>
+</body>
+</html>
+
