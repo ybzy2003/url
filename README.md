@@ -1,4 +1,3 @@
-</style>
 </head>
 <tr><td height="74">&nbsp;</td>
   <td height="74" colspan="4"><form action="http://www.baidu.com/baidu" target="_blank"><div align="center">
