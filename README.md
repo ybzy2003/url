@@ -1,17 +1,3 @@
-</head><style type="text/css">
-<!--
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-a:active {
-	text-decoration: none;
-}
 -->
 </style>
 <tr><td height="74">&nbsp;</td>
